@@ -368,7 +368,7 @@ def getsticker(bot: Bot, update: Update):
 # /ip is for private use
 __help__ = """ """
 
-__mod_name__ = "🚀Misc"
+__mod_name__ = " "
 
 ID_HANDLER = DisableAbleCommandHandler("id", get_id, pass_args=True)
 IP_HANDLER = CommandHandler("ip", get_bot_ip, filters=Filters.chat(OWNER_ID))
