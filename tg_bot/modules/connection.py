@@ -144,19 +144,6 @@ def connected(bot, update, chat, user_id, need_admin=True):
 
 
 
-__help__ = """
-Actions are available with connected groups:
- • View and edit notes
- • View and edit filters
- • More in future!
-
- - /connect <chatid>: Connect to remote chat
- - /disconnect: Disconnect from chat
- - /allowconnect on/yes/off/no: Allow connect users to group
-"""
-
-__mod_name__ = "🔌CONNECTIONS"
-
 CONNECT_CHAT_HANDLER = CommandHandler("connect", connect_chat, allow_edited=True, pass_args=True)
 DISCONNECT_CHAT_HANDLER = CommandHandler("disconnect", disconnect_chat, allow_edited=True)
 ALLOW_CONNECTIONS_HANDLER = CommandHandler("allowconnect", allow_connections, allow_edited=True, pass_args=True)
