@@ -366,13 +366,7 @@ def getsticker(bot: Bot, update: Update):
                                             parse_mode=ParseMode.MARKDOWN)
 
 # /ip is for private use
-__help__ = """
- - /id: get the current group id. If used by replying to a message, gets that user's id.
- - /info: get information about a user.
- - /markdownhelp: quick summary of how markdown works in telegram - can only be called in private chats.
- - /stickerid: reply to a sticker and get sticker id of that.
- - /getsticker: reply to a sticker and get that sticker as .png and image. 
-"""
+__help__ = """ """
 
 __mod_name__ = "🚀Misc"
 
