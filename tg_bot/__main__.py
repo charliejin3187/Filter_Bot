@@ -18,36 +18,25 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-┈╭━━━━━━━━━━━╮┈
-┈┃╭━━━╮┊╭━━━╮┃┈
-╭┫┃┈▇┈┃┊┃┈▇┈┃┣╮
-┃┃╰━━━╯┊╰━━━╯┃┃
-╰┫╭━╮╰━━━╯╭━╮┣╯
-┈┃┃┣┳┳┳┳┳┳┳┫┃┃┈
-┈┃┃╰┻┻┻┻┻┻┻╯┃┃┈
-┈╰━━━━━━━━━━━╯┈
-╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗
-║║║╠─║─║─║║║║║╠─
-╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝
+
 
 *Hai* *{}*,*My Name is* *{}*! 
 
-Am a powerful *Filter Bot* in Telegram.
-Developed by this [Legend](tg://user?id={}).
 
-```Y You Can Add any kind of Filters with This Bot!```
+Am Google Lens Bot. I can give you the best result related your photo or gif.😎 .
 
-/help for more details..
+
+
+☛ Channel:© @DX_BotZ
+
+/help to more details...
 """
 
 HELP_STRINGS = """
 Hello! my name *{}*.
 
-*Main Available Commands* are Below:
+- /reverse: Does a reverse image search of the media which it was replied to.
 
-All of the following commands  / can  be used...
-
-And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nഈ പറഞ്ഞിരിക്കുന്ന commandകൾ എല്ലാം  / അല്ലെങ്കിൽ ! വെച്ച് ഉപയോഗിക്കാവുന്നതാണ്...\n")
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -142,7 +131,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🛅ADD ME TO YOUR GROUP🛅", url="t.me/{}?startgroup=true".format(bot.username))]]))
+                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Creator", url="t.me/charlie_jin".format(bot.username))]]))
     else:
         update.effective_message.reply_text("")
 
