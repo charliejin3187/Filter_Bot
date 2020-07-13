@@ -30,6 +30,7 @@ Am Google Lens Bot. I can give you the best result related your photo or gif.�
 ☛ Channel:© @DX_BotZ
 
 /help to more details...
+
 """
 
 HELP_STRINGS = """
@@ -131,7 +132,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Creator", url="t.me/charlie_jin".format(bot.username))]]))
+                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="👥 Support Group", url="https://t.me/dx_support"), InlineKeyboardButton(text="🔔 Update Channel", url="https://t.me/dx_botz")], [InlineKeyboardButton(text="❓ Help", url="https://t.me/{}?start=help".format(context.bot.username))]]) 
     else:
         update.effective_message.reply_text("")
 
